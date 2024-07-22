@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0d192c;
+  --card: #15263f;
+  --neutral: #ffffff;
+  --soft-blue: #8bacd9;
+  --cyan: #00fff8;
+  --rule: #2e405a;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: var(--bg);
+  font-optical-sizing: auto;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-content {
+  background-color: var(--card);
+  width: 327px;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 16px;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 8px;
+  background: none;
+  -webkit-transition: all 0.8s ease-in-out;
+}
+
+.main-img:hover {
+  background: var(--cyan);
+  filter: none;
+  cursor: pointer;
+}
+
+.main-header {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: auto;
+  text-align: left;
+  color: var(--neutral);
+  margin-top: 24px;
+}
+
+.main-paragraph {
+  line-height: 26px;
+  font-size: 18px;
+  font-weight: 200;
+  margin-top: 12px;
+  text-align: left;
+  color: var(--soft-blue);
+}
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+.info-price {
+  display: flex;
+  gap: 8px;
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: auto;
+    text-align: left;
+    color: var(--cyan);
+  }
+}
+
+.info-days {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  p {
+    color: var(--soft-blue);
+    font-size: 16px;
+  }
+}
+
+hr {
+  border: 1px solid var(--rule);
+  margin-top: 16px;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+
+  img {
+    border: 1px solid var(--neutral);
+    border-radius: 9999px;
+    width: 33px;
+    height: 33px;
+  }
+  span {
+    color: var(--soft-blue);
+    margin-right: 5px;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: left;
+    color: var(--neutral);
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    width: 350px;
+  }
+}
