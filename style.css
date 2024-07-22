@@ -38,17 +38,45 @@ main {
   border-radius: 16px;
 }
 
+.img-container {
+  position: relative;
+}
+
 .main-img {
   width: 100%;
   border-radius: 8px;
-  background: none;
-  -webkit-transition: all 0.8s ease-in-out;
 }
 
 .main-img:hover {
   background: var(--cyan);
   filter: none;
   cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 276px;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: var(--cyan);
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+.img-container:hover .overlay {
+  opacity: 50.3%;
+  border-radius: 8px;
 }
 
 .main-header {
@@ -131,5 +159,8 @@ hr {
 @media screen and (min-width: 768px) {
   .main-content {
     width: 350px;
+  }
+  .overlay {
+    height: 302px;
   }
 }
